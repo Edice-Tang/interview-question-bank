@@ -33,7 +33,7 @@ Do not draft the final question bank during Stage 1.
 
 Run only after the user explicitly replies `最终成稿` or gives an equally unambiguous confirmation.
 
-Use only the `QUESTION_VERIFIED` material presented in Stage 1. Follow the final-draft format in [workflow.md](references/workflow.md). If no valid question exists, state that no verifiable real interview question was obtained. If employment type is not known, mark the output as type pending instead of generating a formal `面经_[公司]_[岗位]_[FT或Intern]_[地区]` title.
+Use only the `QUESTION_VERIFIED` material presented in Stage 1. Follow the final-draft format in [workflow.md](references/workflow.md). The final draft must include each eligible source's complete, visibly readable `Interview` field in the original language. Preserve its wording, paragraph breaks, lists, punctuation, and spelling; do not translate, summarize, polish, or supplement it. A source whose `Interview` field is truncated, collapsed, or unreadable may contribute no “Interview 原文”; mark it for manual completion rather than presenting partial text as complete. If no valid question exists, state that no verifiable real interview question was obtained. If employment type is not known, mark the output as type pending instead of generating a formal `面经_[公司]_[岗位]_[FT或Intern]_[地区]` title.
 
 ## Non-negotiable boundaries
 
@@ -41,4 +41,4 @@ Use only the `QUESTION_VERIFIED` material presented in Stage 1. Follow the final
 - Do not automate LinkedIn content collection; record a manual-review path instead.
 - Do not store or expose credentials, cookies, tokens, or unnecessary personal data.
 - Do not fill gaps with common questions, model knowledge, or invented process details.
-
+- Do not reproduce an entire source page. “完整原文” means only the complete, visible candidate-authored `Interview` field needed for the final draft.

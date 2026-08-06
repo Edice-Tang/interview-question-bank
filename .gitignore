@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Never commit local collection data or credentials.
+evidence/
+tasks/
+*.cookie
+*.session
+*.env
+

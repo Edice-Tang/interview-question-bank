@@ -1,0 +1,4 @@
+interface:
+  display_name: "Interview Question Bank"
+  short_description: "Collect, verify, and publish real interview questions"
+  default_prompt: "Use $interview-question-bank to search and verify interview experiences for a target company and role."

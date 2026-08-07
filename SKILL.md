@@ -14,6 +14,12 @@ Run a two-stage, evidence-first workflow. Do not blend search and final drafting
 3. Create a task folder from the files in `assets/templates/` when the user wants files saved locally.
 4. Confirm the target company, role, region, and type. Treat an unspecified type as `不限` during search; never invent `FT` or `Intern` in the final title.
 
+## Optional Apify discovery
+
+Use Apify only for public-page discovery or for reading an explicitly approved, publicly accessible URL. Read [apify-local-setup.md](references/apify-local-setup.md) before configuring or running it. Keep `APIFY_TOKEN` only in local `.env`; never commit it.
+
+The bundled runner permits only Google Search discovery and Website Content Crawler. Use a LinkedIn result only as a candidate link: do not send LinkedIn URLs to a crawler and do not collect LinkedIn post bodies through an API. Open a visible post in the user's logged-in browser for manual review, or record the source as inaccessible.
+
 ## Stage 1 — search and verify
 
 Search the requested platforms according to the routing reference. Record each attempted platform and classify sources using the defined statuses.

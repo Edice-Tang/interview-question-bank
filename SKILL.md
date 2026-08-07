@@ -12,7 +12,7 @@ Run a two-stage, evidence-first workflow. Do not blend search and final drafting
 1. Read [workflow.md](references/workflow.md).
 2. Read [platform-routing.md](references/platform-routing.md) before accessing any platform.
 3. Create a task folder from the files in `assets/templates/` when the user wants files saved locally.
-4. Confirm the target company, role, region, and type. Treat an unspecified type as `不限` during search; never invent `FT` or `Intern` in the final title.
+4. Confirm the target company, role, region, and type. Apply a rolling publication window: include only records published within the 18 months immediately preceding the task date. Exclude records with an earlier or unverified publication date. Treat an unspecified type as `不限` during search; never invent `FT` or `Intern` in the final title.
 
 ## Optional Apify discovery
 
@@ -24,7 +24,7 @@ The bundled runner permits only Google Search discovery and Website Content Craw
 
 Search the requested platforms according to the routing reference. Record each attempted platform and classify sources using the defined statuses.
 
-Only treat a question as eligible when its source is `QUESTION_VERIFIED`, has an original-post URL, and has sufficient evidence. Do not use snippets, official recruiting content, media summaries, or generic preparation guides as the only evidence of a real question.
+Only treat a question as eligible when its source is `QUESTION_VERIFIED`, has an original-post URL, has a verifiable publication date within the rolling 18-month window, and has sufficient evidence. Do not use snippets, official recruiting content, media summaries, or generic preparation guides as the only evidence of a real question.
 
 Before ending Stage 1, reply in the conversation with exactly these sections:
 
@@ -39,7 +39,7 @@ Do not draft the final question bank during Stage 1.
 
 Run only after the user explicitly replies `最终成稿` or gives an equally unambiguous confirmation.
 
-Use only the `QUESTION_VERIFIED` material presented in Stage 1. Follow the final-draft format in [workflow.md](references/workflow.md). The final draft must include each eligible source's complete, visibly readable `Interview` field in the original language. Preserve its wording, paragraph breaks, lists, punctuation, and spelling; do not translate, summarize, polish, or supplement it. A source whose `Interview` field is truncated, collapsed, or unreadable may contribute no “Interview 原文”; mark it for manual completion rather than presenting partial text as complete. If no valid question exists, state that no verifiable real interview question was obtained. If employment type is not known, mark the output as type pending instead of generating a formal `面经_[公司]_[岗位]_[FT或Intern]_[地区]` title.
+Use only the `QUESTION_VERIFIED` material presented in Stage 1 that was published within the rolling 18-month window. Follow the final-draft format in [workflow.md](references/workflow.md). The final draft must include each eligible source's complete, visibly readable `Interview` field in the original language. Preserve its wording, paragraph breaks, lists, punctuation, and spelling; do not translate, summarize, polish, or supplement it. A source whose `Interview` field is truncated, collapsed, or unreadable may contribute no “Interview 原文”; mark it for manual completion rather than presenting partial text as complete. If no valid question exists, state that no verifiable real interview question was obtained. If employment type is not known, mark the output as type pending instead of generating a formal `面经_[公司]_[岗位]_[FT或Intern]_[地区]` title.
 
 ## Non-negotiable boundaries
 
